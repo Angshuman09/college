@@ -33,6 +33,38 @@ void insertAtEnd(Node **root, int value)
     temp->next = newNode;
 }
 
+void deleteAtmiddle(Node** root, int value){
+    Node* temp = *root;
+    Node* prev = NULL;
+
+    if(temp!=NULL && temp->data == value){
+        *root = temp->next;
+    }
+    while(temp!=NULL){
+        if(temp->data == value){
+            prev->next = temp->next;
+            free(temp);
+        }
+
+        prev = temp;
+        temp = temp->next;
+    }
+}
+
+void reverseLinkedList(Node** root){
+    Node* prev = NULL;
+    Node* curr = *root;
+    Node* next;
+    while(curr != NULL){
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+
+    *root = prev;
+}
+
 void display(Node *node)
 {
     Node *temp = node;
@@ -50,6 +82,12 @@ int main()
     insertAtEnd(&root, 2);
     insertAtEnd(&root, 3);
     insertAtEnd(&root, 4);
+    display(root);
+
+    deleteAtmiddle(&root, 3);
+    display(root);
+
+    reverseLinkedList(&root);
     display(root);
 
     return 0;

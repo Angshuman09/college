@@ -100,3 +100,4 @@ replay_pid*
 *a.out
 
 .DS_Store
+test.c
