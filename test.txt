@@ -1,0 +1,13 @@
+ Managing your personal book collection: Let's assume you have a large collectin of books in your home. To track the 
+ details of the books and their availablity status(eg. to whom and when you lent it), you want to maintain a digital record.
+ To start with this project, following preliminaries are to bre done:
+
+ - Decide on the record structure(eg. which data structure(s) to use, what fields to keep, what will be the unique field etc.)
+
+ - write a file handling program(s) to do the following:
+
+      > Add new records of books
+      > Search for books using various criteria(like ISBN, Book name, Author etc.)
+      > Modify the detail of existing book records
+
+ Also add a simple menu so user can easily interect with it.
